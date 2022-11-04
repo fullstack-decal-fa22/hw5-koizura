@@ -42,6 +42,8 @@ app.post('/post', (req, res) => {
   const newPost = {id:parseInt(req.body.id, 10), title: req.body.title, body: req.body.body, comments: []}
   data[req.body.id] = newPost
   res.send(newPost)
+  console.log(newPost)
+
 })
 
 app.post('/post/:postId/comment', (req, res) => {
